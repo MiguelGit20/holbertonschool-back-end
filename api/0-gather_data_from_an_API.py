@@ -1,10 +1,18 @@
 #!/usr/bin/python3
+"""
+Python script that, using this REST API, for a given employee ID,
+returns information about his/her TODO list progress.
+"""
 import requests
 from sys import argv
 import json
 
 
 def fetch_data_from_api():
+    """
+    Data collection and organization
+    """
+
     response_api_data = requests.get(
         'https://jsonplaceholder.typicode.com/todos')
     response_api_users = requests.get(
